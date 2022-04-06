@@ -36,13 +36,16 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
-      // let coArrays = ['b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-      if(this.state.phrase.indexOf(vowelsArray[0]) > -1 ){
-        this.setState.phraseTranslated = vowelsArray + "way";
-        return this.setState.phraseTranslated; 
-              }
+      let firstVowel = vowelsArray[0]
+      if(currentWord[0] === firstVowel) {
+        return `${currentWord}way` 
+        } else if (
+          currentWord !== vowelsArray) {
+            return `${currentWord}ay`
+          }
+    
       // Remember: console.log is your friend :)
-
+         
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
       return currentWord
@@ -105,7 +108,7 @@ class App extends Component {
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by ~Jose & Samir~</footer>
       </>
     )
   }
