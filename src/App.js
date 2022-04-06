@@ -20,6 +20,8 @@ class App extends Component {
   myPigLatinCodeHere = () => {
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
+
+    
     let userInput = this.state.phrase.split(" ")
     console.log("userInput:", userInput)
 
@@ -34,9 +36,16 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
-
+      let firstVowel = vowelsArray[0]
+      if(currentWord[0] === firstVowel) {
+        return `${currentWord}way` 
+        } else if (
+          currentWord !== vowelsArray) {
+            return `${currentWord}ay`
+          }
+    
       // Remember: console.log is your friend :)
-
+         
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
       return currentWord
@@ -99,7 +108,7 @@ class App extends Component {
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by ~Jose & Samir~</footer>
       </>
     )
   }
