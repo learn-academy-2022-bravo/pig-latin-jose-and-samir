@@ -20,6 +20,8 @@ class App extends Component {
   myPigLatinCodeHere = () => {
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
+
+    
     let userInput = this.state.phrase.split(" ")
     console.log("userInput:", userInput)
 
@@ -34,7 +36,11 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
-
+      // let coArrays = ['b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+      if(this.state.phrase.indexOf(vowelsArray[0]) > -1 ){
+        this.setState.phraseTranslated = vowelsArray + "way";
+        return this.setState.phraseTranslated; 
+              }
       // Remember: console.log is your friend :)
 
 
